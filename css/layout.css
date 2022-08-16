@@ -1,0 +1,85 @@
+#home-content{
+    text-align: center;
+    width: 60%;
+    height: 50%;
+    margin: auto;
+}
+#projects-content{
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+.accordion{
+  padding: 15px;
+  width: 50%;
+}
+.project .row{
+  text-align: center;
+}
+.project .column{
+  text-align: left;
+  width: 50%;
+  float: left;
+}
+.navList{    
+    margin: 4rem;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.navList a.hamburger{
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .topNav li:not(:first-child) {
+        display: none;
+    }
+    .topNav a.hamburger {
+      float: right;
+      display: block;
+      position: absolute;
+      right: 0.5rem;
+      top: 0.5rem;
+    }
+    .project .column{
+      width: 100%;
+    }
+    .accordion{
+      width: 100%;
+    }
+    #projects-content{
+      width: 100%;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+  .topNav.responsive {position: relative;}
+  .topNav.responsive a.hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;    
+  }
+  .navList
+  {
+    float: none;
+    display: block;
+    text-align: center;
+    margin:0;
+  } 
+  .topNav.responsive .navList li{
+    float: none;
+    display: block;
+    text-align: center;
+  } 
+}
+
+.footer{
+    margin-top: 10rem;   
+    text-align: center;
+}
+

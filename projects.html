@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My Website</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="Ron Vol">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="images/x-icon" href="">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/1c2893a02b.js" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans">
+    </head>
+
+    <body>
+        <header>
+            <div class="topNav" id="topNav">  
+                <nav>                         
+                    <ul class="navList" id="navList">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="#">General</a></li>
+                        <a href="javascript:void(0);" class="hamburger" onclick="changeNav()">
+                            <i class="fa fa-bars"></i></a>
+                    </ul>               
+                </nav>
+            </div>
+        </header>       
+
+        <main>
+            <div class="content" id="projects-content">
+                <button class="accordion">Maze Project</button>
+                <div class="panel">
+                    <section class="project">
+                        <div class="row">
+                        <p>
+                            <a href="https://github.com/RonVol/Maze-Project" class="github-icon"><i class="fa-brands fa-github"></i></a> <br>
+                            This project has been made as a university course work. <br>
+                            This was a very fun project to do and i learned a lot about Design Patterns, SOLID, threads and architectures. <br>
+                            The project is written in Java and can be broken down to 3 main parts.                    
+                        </p>
+                        <div class="column">
+                            <ul>
+                                <li> <h3>Algorithems</h3>
+                                    Algorithems used to generate a maze - simple single path & Randomized Prim's algorithm. <br>
+                                    Searching algorithems - BreadthFirstSearch, BestFirstSearch, DepthFirstSearch. <br>
+                                    Adapter Design Pattern is being used to adapt a Maze instance to a searchable maze.
+                                </li>
+                                <li>
+                                    <h3>Client-Server architecture</h3>                            
+                                    Server uses a threadpool to handle multiple clients and Strategy Design Pattern to determine
+                                    at run-time two kinds of client requests - Maze generation and Solution to the maze.
+                                    A byte array representing the maze is being compressed between communications
+                                    by convering binary data(maze is represented as 0's and 1's) to 8-bit integers. <br>
+                                    A singleton configuration file determines which kind of maze generation and solution algorithem to apply.
+                                </li>                        
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <ul>
+                                <li>
+                                    <h3>GUI and MVVM Architecture</h3>
+                                        The first two parts can be created as a JAR and used here, but for simplicity and comfort
+                                        i uploaded to GitHub all of the packages.<br>
+                                        Creation of GUI using JavaFX and SceneBuilder.
+                                        MVVM architecture is used with the implementation of observer design pattern. <br>
+                                        Includes music, zoom, diagonal movement of the character,visual solution path and saving\loading mazes.                                                                     
+                                </li>  
+                            </ul>
+                            <img src="/images/mazegame.png" alt="maze-project-image" width="600" height="400" style="max-width:100%;height:auto;" >                       
+                        </div>
+                        </div>                                           
+                            
+                    </section>
+                </div>
+                
+                <button class="accordion">Section 2</button>
+                <div class="panel">
+                    <p>Lorem ipsum...</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer" id="footer">
+                <p>&#169; RV 2022</p>
+            </div>        
+        </footer>
+    </body>
+
+        
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+    </script>
+</html>

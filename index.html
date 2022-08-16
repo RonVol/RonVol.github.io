@@ -1,10 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>test</title>
+        <title>My Website</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="Ron Vol">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="images/x-icon" href="">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/1c2893a02b.js" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans">
     </head>
+
     <body>
-        <h1>test</h1>
+        <header>
+            <div class="topNav" id="topNav">  
+                <nav>                         
+                    <ul class="navList" id="navList">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="#">General</a></li>
+                        <a href="javascript:void(0);" class="hamburger" onclick="changeNav()">
+                            <i class="fa fa-bars"></i></a>
+                    </ul>               
+                </nav>
+            </div>
+        </header>       
+
+        <main>
+            <div class="content" id="home-content">
+                <h1><strong>*Website still in Development*</h1></strong><br>
+                <h1 >Hi!</h1>
+                <p>My name is Ron Volnets.</p>
+                <p>I am a student in the department of Software and Information Systems Engineering at Ben-Gurion University. <br>
+                    I have built this website to learn about web development, and as i progress in my learning this website will be updated. <br>
+                    I present here personal projects i have done either by self-learning or from university courses. <br>
+                    In addition to that, i provide explanations and summary on various topics that interest me. <br>
+                </p>
+                <p>Thank you for visiting my website!</p>
+            </div>           
+        </main>
+
+        <footer>
+            <div class="footer" id="footer">
+                <p>&#169; RV 2022</p>
+            </div>        
+        </footer>
     </body>
+
 
 </html>
